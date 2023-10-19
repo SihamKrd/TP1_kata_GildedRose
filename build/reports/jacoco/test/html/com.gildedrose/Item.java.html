@@ -18,7 +18,7 @@ public class Item {
     }
     
     public void updateQuality(){
-<span class="pc bpc" id="L21" title="1 of 5 branches missed.">        switch(this.name){</span>
+<span class="fc bfc" id="L21" title="All 5 branches covered.">        switch(this.name){</span>
             case &quot;Sulfuras, Hand of Ragnaros&quot; : 
 <span class="fc" id="L23">                break;</span>
             case &quot;Aged Brie&quot; :
@@ -44,15 +44,15 @@ public class Item {
 <span class="fc" id="L44">                this.quality = Math.min(50, this.quality);</span>
 <span class="fc" id="L45">                break;</span>
             case &quot;Conjured Mana Cake&quot; :
-<span class="nc" id="L47">                this.quality -= 2;</span>
-<span class="nc bnc" id="L48" title="All 2 branches missed.">                if (this.sellIn &lt; 0) {</span>
-<span class="nc" id="L49">                    this.quality -= 2;                    </span>
+<span class="fc" id="L47">                this.quality -= 2;</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">                if (this.sellIn &lt; 0) {</span>
+<span class="fc" id="L49">                    this.quality -= 2;                    </span>
                 }
-<span class="nc bnc" id="L51" title="All 2 branches missed.">                if(this.quality &lt; 0) {</span>
-<span class="nc" id="L52">                    this.quality = 0;</span>
+<span class="fc bfc" id="L51" title="All 2 branches covered.">                if(this.quality &lt; 0) {</span>
+<span class="fc" id="L52">                    this.quality = 0;</span>
                 }
-<span class="nc" id="L54">                this.sellIn--;</span>
-<span class="nc" id="L55">                break;</span>
+<span class="fc" id="L54">                this.sellIn--;</span>
+<span class="fc" id="L55">                break;</span>
             default :
 <span class="fc" id="L57">                this.sellIn--;</span>
 <span class="fc" id="L58">                this.quality--;</span>

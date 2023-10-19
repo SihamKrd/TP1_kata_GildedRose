@@ -101,4 +101,35 @@ class GildedRoseTest {
     assertEquals(elementString, element.toString(), "toString should return the expected string");
   }
 
+  //Tests Conjured Mana cake
+  @Test
+  @DisplayName("Test Conjured Mana Cake Quality Decreases Twice After One Day")
+  void testQualityConjuredManaCakeDecreaseTwice(){
+    Item element = new Item("Conjured Mana Cake", 3, 6);
+    GildedRose app = new GildedRose(new Item[] {element});
+    app.updateQuality();
+
+    assertEquals(4, element.quality, "Quality should decrease twice for Conjured Mana Cake.");
+  }
+
+  @Test
+  @DisplayName("Test update quality for Conjured Mana Cake After SellIn date")
+  void testQualityConjuredAfterSellInDate(){
+    Item element = new Item("Conjured Mana Cake", -1, 5);
+    GildedRose app = new GildedRose(new Item[] {element});
+    app.updateQuality();
+
+    assertEquals(1, element.quality, "Quality of Conjured Mana Cake should decrease by 4 after sell-in date.");
+  }
+
+  @Test
+  @DisplayName("Test update quality for Conjured Mana Cake when quality is near 0")
+  void testQualityConjuredNearMinimum(){
+    Item element = new Item("Conjured Mana Cake", -1, 2);
+    GildedRose app = new GildedRose(new Item[] {element});
+    app.updateQuality();
+
+    assertEquals(0, element.quality, "Quality of Conjured Mana Cake should be 0");
+  }
+
 }
