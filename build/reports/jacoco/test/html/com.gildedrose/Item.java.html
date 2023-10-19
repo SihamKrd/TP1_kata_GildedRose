@@ -48,20 +48,18 @@ public class Item {
 <span class="fc bfc" id="L48" title="All 2 branches covered.">                if (this.sellIn &lt; 0) {</span>
 <span class="fc" id="L49">                    this.quality -= 2;                    </span>
                 }
-<span class="fc bfc" id="L51" title="All 2 branches covered.">                if(this.quality &lt; 0) {</span>
-<span class="fc" id="L52">                    this.quality = 0;</span>
-                }
-<span class="fc" id="L54">                this.sellIn--;</span>
-<span class="fc" id="L55">                break;</span>
+<span class="fc" id="L51">                this.quality = Math.max(0, this.quality);</span>
+<span class="fc" id="L52">                this.sellIn--;</span>
+<span class="fc" id="L53">                break;</span>
             default :
-<span class="fc" id="L57">                this.sellIn--;</span>
-<span class="fc" id="L58">                this.quality--;</span>
-<span class="pc bpc" id="L59" title="1 of 2 branches missed.">                if (this.sellIn &lt; 0) {</span>
-<span class="fc" id="L60">                    this.quality--;</span>
+<span class="fc" id="L55">                this.sellIn--;</span>
+<span class="fc" id="L56">                this.quality--;</span>
+<span class="pc bpc" id="L57" title="1 of 2 branches missed.">                if (this.sellIn &lt; 0) {</span>
+<span class="fc" id="L58">                    this.quality--;</span>
                 }
-<span class="fc" id="L62">                this.quality = Math.max(0, this.quality);</span>
+<span class="fc" id="L60">                this.quality = Math.max(0, this.quality);</span>
             break;
         }
-<span class="fc" id="L65">    }</span>
+<span class="fc" id="L63">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
