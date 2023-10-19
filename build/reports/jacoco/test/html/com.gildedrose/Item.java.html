@@ -3,57 +3,65 @@
 public class Item {
 
     public String name;
-
     public int sellIn;
-
     public int quality;
 
-<span class="fc" id="L11">    public Item(String name, int sellIn, int quality) {</span>
-<span class="fc" id="L12">        this.name = name;</span>
-<span class="fc" id="L13">        this.sellIn = sellIn;</span>
-<span class="fc" id="L14">        this.quality = quality;</span>
-<span class="fc" id="L15">    }</span>
+<span class="fc" id="L9">    public Item(String name, int sellIn, int quality) {</span>
+<span class="fc" id="L10">        this.name = name;</span>
+<span class="fc" id="L11">        this.sellIn = sellIn;</span>
+<span class="fc" id="L12">        this.quality = quality;</span>
+<span class="fc" id="L13">    }</span>
 
    @Override
    public String toString() {
-<span class="fc" id="L19">        return this.name + &quot;, &quot; + this.sellIn + &quot;, &quot; + this.quality;</span>
+<span class="fc" id="L17">        return this.name + &quot;, &quot; + this.sellIn + &quot;, &quot; + this.quality;</span>
     }
     
     public void updateQuality(){
-<span class="fc bfc" id="L23" title="All 4 branches covered.">        switch(this.name){</span>
+<span class="pc bpc" id="L21" title="1 of 5 branches missed.">        switch(this.name){</span>
             case &quot;Sulfuras, Hand of Ragnaros&quot; : 
-<span class="fc" id="L25">                break;</span>
+<span class="fc" id="L23">                break;</span>
             case &quot;Aged Brie&quot; :
-<span class="fc" id="L27">                this.sellIn--; </span>
-<span class="fc" id="L28">                this.quality++;</span>
-<span class="pc bpc" id="L29" title="1 of 2 branches missed.">                if (this.sellIn &lt; 0) {</span>
-<span class="fc" id="L30">                    this.quality++;</span>
+<span class="fc" id="L25">                this.sellIn--; </span>
+<span class="fc" id="L26">                this.quality++;</span>
+<span class="pc bpc" id="L27" title="1 of 2 branches missed.">                if (this.sellIn &lt; 0) {</span>
+<span class="fc" id="L28">                    this.quality++;</span>
                 }
-<span class="fc" id="L32">                this.quality = Math.min(50, this.quality);</span>
-<span class="fc" id="L33">                break;</span>
+<span class="fc" id="L30">                this.quality = Math.min(50, this.quality);</span>
+<span class="fc" id="L31">                break;</span>
             case &quot;Backstage passes to a TAFKAL80ETC concert&quot; :
-<span class="fc" id="L35">                this.quality++;</span>
-<span class="fc bfc" id="L36" title="All 2 branches covered.">                if (this.sellIn &lt; 11 ) {</span>
-<span class="fc" id="L37">                    this.quality++;</span>
+<span class="fc" id="L33">                this.quality++;</span>
+<span class="fc bfc" id="L34" title="All 2 branches covered.">                if (this.sellIn &lt; 11 ) {</span>
+<span class="fc" id="L35">                    this.quality++;</span>
                 }
-<span class="fc bfc" id="L39" title="All 2 branches covered.">                if (this.sellIn &lt; 6 ) {</span>
-<span class="fc" id="L40">                    this.quality++;</span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">                if (this.sellIn &lt; 6 ) {</span>
+<span class="fc" id="L38">                    this.quality++;</span>
                 }
-<span class="fc" id="L42">                this.sellIn--;</span>
-<span class="fc bfc" id="L43" title="All 2 branches covered.">                if (this.sellIn &lt; 0) {</span>
-<span class="fc" id="L44">                    this.quality = 0;</span>
+<span class="fc" id="L40">                this.sellIn--;</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">                if (this.sellIn &lt; 0) {</span>
+<span class="fc" id="L42">                    this.quality = 0;</span>
                 }
-<span class="fc" id="L46">                this.quality = Math.min(50, this.quality);</span>
-<span class="fc" id="L47">                break;</span>
+<span class="fc" id="L44">                this.quality = Math.min(50, this.quality);</span>
+<span class="fc" id="L45">                break;</span>
+            case &quot;Conjured Mana Cake&quot; :
+<span class="nc" id="L47">                this.quality -= 2;</span>
+<span class="nc bnc" id="L48" title="All 2 branches missed.">                if (this.sellIn &lt; 0) {</span>
+<span class="nc" id="L49">                    this.quality -= 2;                    </span>
+                }
+<span class="nc bnc" id="L51" title="All 2 branches missed.">                if(this.quality &lt; 0) {</span>
+<span class="nc" id="L52">                    this.quality = 0;</span>
+                }
+<span class="nc" id="L54">                this.sellIn--;</span>
+<span class="nc" id="L55">                break;</span>
             default :
-<span class="fc" id="L49">                this.sellIn--;</span>
-<span class="fc" id="L50">                this.quality--;</span>
-<span class="pc bpc" id="L51" title="1 of 2 branches missed.">                if (this.sellIn &lt; 0) {</span>
-<span class="fc" id="L52">                    this.quality--;</span>
+<span class="fc" id="L57">                this.sellIn--;</span>
+<span class="fc" id="L58">                this.quality--;</span>
+<span class="pc bpc" id="L59" title="1 of 2 branches missed.">                if (this.sellIn &lt; 0) {</span>
+<span class="fc" id="L60">                    this.quality--;</span>
                 }
-<span class="fc" id="L54">                this.quality = Math.max(0, this.quality);</span>
+<span class="fc" id="L62">                this.quality = Math.max(0, this.quality);</span>
             break;
         }
-<span class="fc" id="L57">    }</span>
+<span class="fc" id="L65">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

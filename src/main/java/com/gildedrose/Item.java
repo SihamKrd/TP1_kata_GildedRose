@@ -3,9 +3,7 @@ package com.gildedrose;
 public class Item {
 
     public String name;
-
     public int sellIn;
-
     public int quality;
 
     public Item(String name, int sellIn, int quality) {
@@ -44,6 +42,16 @@ public class Item {
                     this.quality = 0;
                 }
                 this.quality = Math.min(50, this.quality);
+                break;
+            case "Conjured Mana Cake" :
+                this.quality -= 2;
+                if (this.sellIn < 0) {
+                    this.quality -= 2;                    
+                }
+                if(this.quality < 0) {
+                    this.quality = 0;
+                }
+                this.sellIn--;
                 break;
             default :
                 this.sellIn--;
