@@ -132,4 +132,23 @@ class GildedRoseTest {
     assertEquals(0, element.quality, "Quality of Conjured Mana Cake should be 0");
   }
 
+  @Test
+  @DisplayName("Test update quality for Aged Brie when the sellIn just reached zero")
+  void testAgedBrieOneDayBeforeSellInDate() {
+    Item element = new Item("Aged Brie", 1, 5);
+    GildedRose app = new GildedRose(new Item[] {element});
+    app.updateQuality();
+
+    assertEquals(6, element.quality, "Quality of Aged Brie should increase by 1");
+  }
+
+  @Test
+  @DisplayName("Test update quality for Regular Item when the sellIn just reached zero")
+  void testRegularItemQualityDecreases() {
+    Item element = new Item("Elixir of the Mongoose", 1, 5);
+    GildedRose app = new GildedRose(new Item[] {element});
+    app.updateQuality();
+
+    assertEquals(4, element.quality, "Quality of Regular Item should decrease by 1 with positive SellIn");
+  }
 }

@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.gildedrose.GildedRoseTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2023-10-19T13:24:04" hostname="DESKTOP-AAAEPQF" time="0.037">
+<testsuite name="com.gildedrose.GildedRoseTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2023-10-21T13:33:13" hostname="DESKTOP-AAAEPQF" time="0.039">
   <properties/>
-  <testcase name="Test that quality degrades twice as fast after sellIn date" classname="com.gildedrose.GildedRoseTest" time="0.019"/>
+  <testcase name="Test that quality degrades twice as fast after sellIn date" classname="com.gildedrose.GildedRoseTest" time="0.013"/>
   <testcase name="Test update quality for Conjured Mana Cake when quality is near 0" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test that the name is unchanged" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
+  <testcase name="Test that the name is unchanged" classname="com.gildedrose.GildedRoseTest" time="0.003"/>
   <testcase name="Test that 'Sulfuras' quality remains unchanged" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test that'Aged Brie'quality is never more than 50" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test the toString method" classname="com.gildedrose.GildedRoseTest" time="0.005"/>
+  <testcase name="Test that'Aged Brie'quality is never more than 50" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test the toString method" classname="com.gildedrose.GildedRoseTest" time="0.008"/>
   <testcase name="Test Backstage quality not over 50 when SellIn&lt;=5 and quality near 50" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="Test that quality can never be negative" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test Conjured Mana Cake Quality Decreases Twice After One Day" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test that 'Aged Brie' increases in quality over time" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test that 'Aged Brie' increases in quality over time" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="Test quality reset to zero of Backstage when the concert is over" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test update quality for Conjured Mana Cake After SellIn date" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test Backstage quality increase by 1 when SellIn&gt;10" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test update quality for Regular Item when the sellIn just reached zero" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test update quality for Aged Brie when the sellIn just reached zero" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test update quality for Conjured Mana Cake After SellIn date" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test Backstage quality increase by 1 when SellIn&gt;10" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test the quality Backstage passes when SellIn &lt;= 10" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

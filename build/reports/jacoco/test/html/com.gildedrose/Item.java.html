@@ -24,7 +24,7 @@ public class Item {
             case &quot;Aged Brie&quot; :
 <span class="fc" id="L25">                this.sellIn--; </span>
 <span class="fc" id="L26">                this.quality++;</span>
-<span class="pc bpc" id="L27" title="1 of 2 branches missed.">                if (this.sellIn &lt; 0) {</span>
+<span class="fc bfc" id="L27" title="All 2 branches covered.">                if (this.sellIn &lt; 0) {</span>
 <span class="fc" id="L28">                    this.quality++;</span>
                 }
 <span class="fc" id="L30">                this.quality = Math.min(50, this.quality);</span>
@@ -54,7 +54,7 @@ public class Item {
             default :
 <span class="fc" id="L55">                this.sellIn--;</span>
 <span class="fc" id="L56">                this.quality--;</span>
-<span class="pc bpc" id="L57" title="1 of 2 branches missed.">                if (this.sellIn &lt; 0) {</span>
+<span class="fc bfc" id="L57" title="All 2 branches covered.">                if (this.sellIn &lt; 0) {</span>
 <span class="fc" id="L58">                    this.quality--;</span>
                 }
 <span class="fc" id="L60">                this.quality = Math.max(0, this.quality);</span>
