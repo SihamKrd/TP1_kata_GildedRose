@@ -104,11 +104,12 @@ class GildedRoseTest {
   //Tests Conjured Mana cake
   @Test
   @DisplayName("Test Conjured Mana Cake Quality Decreases Twice After One Day")
-  void testQualityConjuredManaCakeDecreaseTwice(){
+  void testQualityConjuredDecreaseTwice(){
     Item element = new Item("Conjured Mana Cake", 3, 6);
     GildedRose app = new GildedRose(new Item[] {element});
     app.updateQuality();
 
+    assertEquals(2, element.sellIn, "SellIn should decrease by 1 for Conjured Mana Cake after one day.");
     assertEquals(4, element.quality, "Quality should decrease twice for Conjured Mana Cake.");
   }
 
