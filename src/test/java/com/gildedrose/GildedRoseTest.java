@@ -19,7 +19,7 @@ class GildedRoseTest {
     GildedRose app = new GildedRose(new Item[] {element});
     app.updateQuality();
 
-    assertTrue(element.quality <= 50, "Aged Brie quality should increase over time");
+    assertEquals(50,element.quality, "Aged Brie quality should increase over time");
   }
   @Test
   @DisplayName("Test that quality can never be negative")
