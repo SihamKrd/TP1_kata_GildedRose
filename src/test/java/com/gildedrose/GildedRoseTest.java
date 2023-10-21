@@ -163,4 +163,13 @@ class GildedRoseTest {
   
       assertEquals(3, element.quality, "Quality of Conjured Mana Cake should decrease by 2 when SellIn is 0");
     }
+
+    @Test
+    @DisplayName("Test update quality for Backstage the day it expires") //test pour contrer la mutation "changed conditional boundary" de conjured mana cake
+    void testQualityBackstageSellIn0(){
+      Item element = new Item("Backstage passes to a TAFKAL80ETC concert", 1, 5);
+      element.updateQuality();
+      assertEquals(0, element.sellIn, "SellIn of Backstage passes should be 0 after update");
+      assertEquals(8, element.quality, "Quality of Backstage passes should increase by 3 when SellIn is 0");
+    }
 }
