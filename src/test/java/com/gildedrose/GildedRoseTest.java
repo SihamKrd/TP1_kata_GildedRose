@@ -152,4 +152,15 @@ class GildedRoseTest {
 
     assertEquals(4, element.quality, "Quality of Regular Item should decrease by 1 with positive SellIn");
   }
+
+    //mutation tests
+
+    @Test
+    @DisplayName("Test update quality for Conjured Mana Cake when SellIn date is 0") //test pour contrer la mutation "changed conditional boundary" de conjured mana cake
+    void testQualityConjuredSellIn0(){
+      Item element = new Item("Conjured Mana Cake", 0, 5);
+      element.updateQuality();
+  
+      assertEquals(3, element.quality, "Quality of Conjured Mana Cake should decrease by 2 when SellIn is 0");
+    }
 }
